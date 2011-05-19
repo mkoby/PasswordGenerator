@@ -2,12 +2,15 @@
 _ReSharper*
 
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-*/bin
-*/obj
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+
 
 #userprefs
 **/*.userprefs
 
 # mstest test results
 **/TestResults
-**/test-results
+test-results/
+*.test-cache
