@@ -29,7 +29,7 @@ namespace PasswordGenerator
 		
 		public string GeneratePassword()
 		{
-			int seedValue = Convert.ToInt32(System.DateTime.Now.Millisecond + System.DateTime.Now.Minute + System.DateTime.Now.Month);
+			int seedValue = GetRandomSeedValue(DateTime.Now.Hour);
 			Random random = new Random(seedValue);
 			IList<char> itemsToUse = GetItemsToUse();			
 			StringBuilder password = new StringBuilder();
@@ -40,6 +40,19 @@ namespace PasswordGenerator
 			}
 			
 			return password.ToString();
+		}
+		
+		private int GetRandomSeedValue(int totalRotations)
+		{
+			int output = 0;
+			for(int rotations = 0; rotations < totalRotations; rotations++)
+			{
+				Guid guid = System.Guid.NewGuid();
+				foreach(byte b in guid.ToByteArray())
+					output += (int)b;
+			}
+			
+			return output;
 		}
 		
 		private IList<char> GetItemsToUse()
