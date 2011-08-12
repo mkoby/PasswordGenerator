@@ -29,10 +29,9 @@ namespace PasswordGenerator
 		
 		public string GeneratePassword()
 		{
-			int seedValue = GetRandomSeedValue(DateTime.Now.Hour);
-			Random random = new Random(seedValue);
 			IList<char> itemsToUse = GetItemsToUse();			
 			StringBuilder password = new StringBuilder();
+			Random random = new Random(GetRandomSeedValue(DateTime.Now.Second));
 			
 			while(password.Length < PasswordLength)
 			{
@@ -45,7 +44,14 @@ namespace PasswordGenerator
 		private int GetRandomSeedValue(int totalRotations)
 		{
 			int output = 0;
-			for(int rotations = 0; rotations < totalRotations; rotations++)
+			
+			//Just making sure we have a good value
+			//Also, making sure we don't loop more than about 30 times
+			int total = 2;
+			if( totalRotations > 2 )
+				total = totalRotations / 2;
+			
+			for(int rotations = 0; rotations < total; rotations++)
 			{
 				Guid guid = System.Guid.NewGuid();
 				foreach(byte b in guid.ToByteArray())
