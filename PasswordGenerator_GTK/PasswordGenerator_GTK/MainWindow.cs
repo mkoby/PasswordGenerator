@@ -43,7 +43,8 @@ public partial class MainWindow : Gtk.Window
 	
 	public MainWindow () : base(Gtk.WindowType.Toplevel)
 	{
-		gen = new PasswordGenerator.Generator(14, useUppercase, useLowercase, useNumbers, useSpecialCharacters);
+		gen = new PasswordGenerator.Generator(14, useUppercase, useLowercase, 
+		                                      useNumbers, useSpecialCharacters);
 		Build ();
 	}
 
@@ -55,30 +56,22 @@ public partial class MainWindow : Gtk.Window
 	
 	protected virtual void OnUseUppercaseCheckboxToggled (object sender, System.EventArgs e)
 	{
-		CheckButton cb = (CheckButton)sender;
-		SetGeneratorOptions(cb);
-		Console.WriteLine("{0}: {1}", cb.Name, gen.UseUpperCaseLetters);
+		SetGeneratorOptions((CheckButton)sender);;
 	}
 	
 	protected virtual void OnUseLowerCaseCheckboxToggled (object sender, System.EventArgs e)
 	{
-		CheckButton cb = (CheckButton)sender;	
-		SetGeneratorOptions(cb);
-		Console.WriteLine("{0}: {1}", cb.Name, gen.UseLowerCaseLetters);
+		SetGeneratorOptions((CheckButton)sender);;
 	}
 	
 	protected virtual void OnUseNumbersCheckboxToggled (object sender, System.EventArgs e)
 	{
-		CheckButton cb = (CheckButton)sender;
-		SetGeneratorOptions(cb);
-		Console.WriteLine("{0}: {1}", cb.Name, gen.UseNumbers);
+		SetGeneratorOptions((CheckButton)sender);
 	}
 	
 	protected virtual void OnUseSpecialCharactersCheckboxToggled (object sender, System.EventArgs e)
 	{
-		CheckButton cb = (CheckButton)sender;
-		SetGeneratorOptions(cb);
-		Console.WriteLine("{0}: {1}", cb.Name, gen.UseSpecialCharacters);
+		SetGeneratorOptions((CheckButton)sender);
 	}
 	
 	protected virtual void OnGeneratePasswordButtonClicked (object sender, System.EventArgs e)
