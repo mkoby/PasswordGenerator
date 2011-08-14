@@ -1,19 +1,150 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <stetic-interface>
   <configuration>
+    <images-root-path>..</images-root-path>
     <target-gtk-version>2.6</target-gtk-version>
   </configuration>
   <import>
     <widget-library name="glade-sharp, Version=2.6.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/PasswordGenerator_GTK.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="400 300">
+  <widget class="Gtk.Window" id="MainWindow" design-size="626 193">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">MainWindow</property>
+    <property name="Title" translatable="yes">Password Generator (GTK)</property>
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
-      <placeholder />
+      <widget class="Gtk.Fixed" id="fixed1">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.Label" id="label2">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Password Length</property>
+          </widget>
+          <packing>
+            <property name="X">13</property>
+            <property name="Y">23</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="PasswordLengthText">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Text" translatable="yes">14</property>
+            <property name="IsEditable">True</property>
+            <property name="WidthChars">7</property>
+            <property name="MaxLength">2</property>
+            <property name="InvisibleChar">●</property>
+          </widget>
+          <packing>
+            <property name="X">127</property>
+            <property name="Y">16</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.CheckButton" id="UseUppercaseCheckbox">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Label" translatable="yes">Use Uppercase Letters</property>
+            <property name="Active">True</property>
+            <property name="DrawIndicator">True</property>
+            <property name="HasLabel">True</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Toggled" handler="OnUseUppercaseCheckboxToggled" />
+          </widget>
+          <packing>
+            <property name="X">250</property>
+            <property name="Y">8</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.CheckButton" id="UseLowerCaseCheckbox">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Label" translatable="yes">Use Lowercase Letters</property>
+            <property name="Active">True</property>
+            <property name="DrawIndicator">True</property>
+            <property name="HasLabel">True</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Toggled" handler="OnUseLowerCaseCheckboxToggled" />
+          </widget>
+          <packing>
+            <property name="X">251</property>
+            <property name="Y">37</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.CheckButton" id="UseNumbersCheckbox">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Label" translatable="yes">Use Numbers</property>
+            <property name="Active">True</property>
+            <property name="DrawIndicator">True</property>
+            <property name="HasLabel">True</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Toggled" handler="OnUseNumbersCheckboxToggled" />
+          </widget>
+          <packing>
+            <property name="X">427</property>
+            <property name="Y">8</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.CheckButton" id="UseSpecialCharactersCheckbox">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Label" translatable="yes">Use Special Characters</property>
+            <property name="Active">True</property>
+            <property name="DrawIndicator">True</property>
+            <property name="HasLabel">True</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Toggled" handler="OnUseSpecialCharactersCheckboxToggled" />
+          </widget>
+          <packing>
+            <property name="X">428</property>
+            <property name="Y">35</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="GeneratePasswordButton">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Generate Password</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnGeneratePasswordButtonClicked" />
+          </widget>
+          <packing>
+            <property name="X">467</property>
+            <property name="Y">68</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="GeneratedPasswordText">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">False</property>
+            <property name="WidthChars">32</property>
+            <property name="MaxLength">32</property>
+            <property name="InvisibleChar">●</property>
+          </widget>
+          <packing>
+            <property name="X">268</property>
+            <property name="Y">118</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label3">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Generated Password</property>
+          </widget>
+          <packing>
+            <property name="X">128</property>
+            <property name="Y">122</property>
+          </packing>
+        </child>
+      </widget>
     </child>
   </widget>
 </stetic-interface>
