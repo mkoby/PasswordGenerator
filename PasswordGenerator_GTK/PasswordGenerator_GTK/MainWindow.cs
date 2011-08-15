@@ -54,22 +54,7 @@ public partial class MainWindow : Gtk.Window
 		a.RetVal = true;
 	}
 	
-	protected virtual void OnUseUppercaseCheckboxToggled (object sender, System.EventArgs e)
-	{
-		SetGeneratorOptions((CheckButton)sender);;
-	}
-	
-	protected virtual void OnUseLowerCaseCheckboxToggled (object sender, System.EventArgs e)
-	{
-		SetGeneratorOptions((CheckButton)sender);;
-	}
-	
-	protected virtual void OnUseNumbersCheckboxToggled (object sender, System.EventArgs e)
-	{
-		SetGeneratorOptions((CheckButton)sender);
-	}
-	
-	protected virtual void OnUseSpecialCharactersCheckboxToggled (object sender, System.EventArgs e)
+	protected virtual void CheckboxToggled (object sender, System.EventArgs e)
 	{
 		SetGeneratorOptions((CheckButton)sender);
 	}

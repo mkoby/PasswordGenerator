@@ -149,10 +149,10 @@ public partial class MainWindow {
         this.DefaultHeight = 193;
         this.Show();
         this.DeleteEvent += new Gtk.DeleteEventHandler(this.OnDeleteEvent);
-        this.UseUppercaseCheckbox.Toggled += new System.EventHandler(this.OnUseUppercaseCheckboxToggled);
-        this.UseLowerCaseCheckbox.Toggled += new System.EventHandler(this.OnUseLowerCaseCheckboxToggled);
-        this.UseNumbersCheckbox.Toggled += new System.EventHandler(this.OnUseNumbersCheckboxToggled);
-        this.UseSpecialCharactersCheckbox.Toggled += new System.EventHandler(this.OnUseSpecialCharactersCheckboxToggled);
+        this.UseUppercaseCheckbox.Toggled += new System.EventHandler(this.CheckboxToggled);
+        this.UseLowerCaseCheckbox.Toggled += new System.EventHandler(this.CheckboxToggled);
+        this.UseNumbersCheckbox.Toggled += new System.EventHandler(this.CheckboxToggled);
+        this.UseSpecialCharactersCheckbox.Toggled += new System.EventHandler(this.CheckboxToggled);
         this.GeneratePasswordButton.Clicked += new System.EventHandler(this.OnGeneratePasswordButtonClicked);
     }
 }

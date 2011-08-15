@@ -51,7 +51,7 @@
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
-            <signal name="Toggled" handler="OnUseUppercaseCheckboxToggled" />
+            <signal name="Toggled" handler="CheckboxToggled" />
           </widget>
           <packing>
             <property name="X">250</property>
@@ -67,7 +67,7 @@
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
-            <signal name="Toggled" handler="OnUseLowerCaseCheckboxToggled" />
+            <signal name="Toggled" handler="CheckboxToggled" />
           </widget>
           <packing>
             <property name="X">251</property>
@@ -83,7 +83,7 @@
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
-            <signal name="Toggled" handler="OnUseNumbersCheckboxToggled" />
+            <signal name="Toggled" handler="CheckboxToggled" />
           </widget>
           <packing>
             <property name="X">427</property>
@@ -99,7 +99,7 @@
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
-            <signal name="Toggled" handler="OnUseSpecialCharactersCheckboxToggled" />
+            <signal name="Toggled" handler="CheckboxToggled" />
           </widget>
           <packing>
             <property name="X">428</property>
