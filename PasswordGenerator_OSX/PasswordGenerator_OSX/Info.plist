@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.TestMonoMac</string>
+	<string>com.mkoby.passwordgenerator-osx</string>
 	<key>CFBundleName</key>
-	<string>TestMonoMac</string>
+	<string>PasswordGenerator_OSX</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
