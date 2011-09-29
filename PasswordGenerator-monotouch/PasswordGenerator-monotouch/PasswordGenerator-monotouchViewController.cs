@@ -77,7 +77,7 @@ namespace PasswordGeneratormonotouch
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
 		{
 			// Return true for supported orientations
-			return (toInterfaceOrientation != UIInterfaceOrientation.PortraitUpsideDown);
+			return (toInterfaceOrientation == UIInterfaceOrientation.Portrait);
 		}
 	}
 }
