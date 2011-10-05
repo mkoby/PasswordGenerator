@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	
+<CheckBox 
+	android:id="@+id/useUppercaseLetters"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content" 
+	android:text="@string/useUppercaseLetters" />
+<CheckBox 
+	android:id="@+id/useLowercaseLetters"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/useLowercaseLetters" />
+<CheckBox 
+	android:id="@+id/useNumbers"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/useNumbers" />
+<CheckBox 
+	android:id="@+id/useSpecialCharacters"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/useSpecialCharacters" />
+
+<TableLayout 
+	android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1">
+	<TableRow>
+		<TextView android:layout_column="1" 
+				  android:text="@string/passwordLength"
+				  android:textSize="20sp"	/>
+		<Spinner android:id="@+id/passwordLengthSpinner" 
+				 android:layout_width="fill_parent" 
+				 android:layout_height="wrap_content"/>
+	</TableRow>		
+</TableLayout>
+
+<TextView 
+	android:id="@+id/generatedPasswordLabel"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	android:text="@string/generatedPassword" />
+	
+<EditText 
+	android:id="@+id/generatedPasswordText"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" />
+	
+<Button  
+    android:id="@+id/myButton"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="@string/generatePassword"
+    />
+</LinearLayout>
+

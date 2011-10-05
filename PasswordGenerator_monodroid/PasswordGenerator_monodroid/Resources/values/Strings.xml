@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">PasswordGenerator-monodroid</string>
+	<string name="useUppercaseLetters">Use Uppercase Letters</string>
+	<string name="useLowercaseLetters">Use Lowercase Letters</string>
+	<string name="useNumbers">Use Numbers</string>
+	<string name="useSpecialCharacters">Use Special Characters</string>
+	<string name="passwordLength">Password Length</string>
+	<string name="generatePassword">Generate Password</string>
+	<string name="generatedPassword">Generated Password</string>
+	
+	<string-array name="password_length_array">
+		<item>8</item>
+		<item>10</item>
+		<item>12</item>
+		<item>14</item>
+		<item>18</item>
+		<item>20</item>
+		<item>24</item>
+	</string-array>
+</resources>

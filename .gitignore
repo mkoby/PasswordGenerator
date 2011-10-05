@@ -8,10 +8,23 @@ _ReSharper*
 [Dd]ebug*/
 [Rr]elease*/
 
-#userprefs
-**/*.userprefs
-
 # mstest test results
 **/TestResults
 test-results/
 *.test-cache
+
+#User Specific
+*.userprefs
+*.usertasks
+
+#Mono Project Files
+*.pidb
+*.resources
+test-results/
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
